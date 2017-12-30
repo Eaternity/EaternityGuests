@@ -24,7 +24,7 @@ class Feed extends Component {
         <View style={styles.container}>
           <Image
             source={pic}
-            style={{ width: 195, height: 225, marginBottom: 40, marginTop: 40 }}
+            style={{ width: 205, height: 275, marginBottom: 40, marginTop: 40 }}
           />
           <Text
             style={{
@@ -83,7 +83,8 @@ class Feed extends Component {
 }
 
 let pic = {
-  uri: "http://www.eaternity.org/img/professional/climate-friendly.png"
+  uri:
+    "http://www.eaternity.org/assets/2015-11-05-Eaternity_logo_set/Eaternity-Award-big-DE.png"
 };
 
 const styles = StyleSheet.create({

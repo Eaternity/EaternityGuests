@@ -109,7 +109,7 @@ class Home extends Component {
         </BounceImage>
         <Image
           source={pic}
-          style={{ width: 195, height: 225, marginBottom: 100 }}
+          style={{ width: 245, height: 300, marginBottom: 100 }}
         />
         <Button
           buttonStyle={{ backgroundColor: "#d0753b", borderRadius: 10 }}
@@ -124,7 +124,8 @@ class Home extends Component {
 }
 
 let pic = {
-  uri: "http://www.eaternity.org/img/professional/climate-friendly.png"
+  uri:
+    "http://www.eaternity.org/assets/2015-11-05-Eaternity_logo_set/Eaternity-Award-big-DE.png"
 };
 
 const styles = StyleSheet.create({

@@ -4,7 +4,7 @@ export const screens = [
     subtitle: "Welcher Herausforderung müssen wir uns zum Klimawandel stellen?",
     id: "problem",
     picture: {
-      large: "http://www.eaternity.org/img/foodprint/roooot.jpg",
+      large: "http://www.eaternity.org/img/home/home-parallax.jpg",
       thumbnail:
         "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-CO2.jpg"
     },
@@ -76,9 +76,8 @@ export const screens = [
     `
   },
   {
-    title: "Was ist ein klimafreundliches Menu?",
-    subtitle:
-      "Wann bekommt ein Menu hier im Restaurant die Auszeichnung «klimafreundlich»?",
+    title: "Was ist ein klimafreundliches Menu",
+    subtitle: "Wann bekommt ein Menu die Auszeichnung «klimafreundlich»?",
     id: "award",
     picture: {
       large: "http://www.eaternity.org/img/eat-at-home/eatathome-parallax.jpg",
@@ -104,6 +103,20 @@ export const screens = [
       large: "http://www.eaternity.org/img/home/screens.png",
       thumbnail:
         "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-Award.jpg"
+    },
+    htmlContent: `
+      <iframe width="1024" height="768" src="https://frontend-dot-eaternity-cloud-2.appspot.com/" frameborder="0" allowfullscreen></iframe>
+      </iframe>
+    `
+  },
+  {
+    title: "An der Verlosung teilnehmen",
+    subtitle: "Rette das Klima und gewinne.",
+    id: "win",
+    picture: {
+      large: "http://www.eaternity.org/img/home/screens.png",
+      thumbnail:
+        "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-Certificate.jpg"
     },
     htmlContent: `
 
