@@ -5,20 +5,20 @@ import { Icon } from "react-native-elements";
 import Feed from "../screens/Feed";
 import Home from "../screens/Home";
 // import Settings from "../screens/Settings";
-import UserDetail from "../screens/UserDetail";
+import ScreenDetail from "../screens/ScreenDetail";
 // import Me from "../screens/Me";
 
 export const FeedStack = StackNavigator({
   Feed: {
     screen: Feed,
     navigationOptions: {
-      title: "Feed"
+      title: "Climate Friendly Award"
     }
   },
   Details: {
-    screen: UserDetail,
+    screen: ScreenDetail,
     navigationOptions: ({ navigation }) => ({
-      title: `${navigation.state.params.name.first.toUpperCase()} ${navigation.state.params.name.last.toUpperCase()}`
+      title: navigation.state.params.title.toUpperCase()
     })
   }
 });

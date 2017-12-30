@@ -6,30 +6,106 @@ import {
   StyleSheet,
   Image,
   Dimensions,
-  Platform
+  Platform,
+  Animated,
+  Easing
 } from "react-native";
 import { Button, List, ListItem } from "react-native-elements";
 
-class BounceImage extends Image {
+class BounceImage extends Component {
+  state = {
+    xPosition: new Animated.Value(50),
+    scale: new Animated.Value(0.5) // Initial value for opacity: 0
+  };
+
+  componentDidMount() {
+    Animated.sequence([
+      Animated.parallel([
+        Animated.timing(this.state.xPosition, {
+          toValue: 200,
+          duration: 400,
+          easing: Easing.back()
+        }),
+        Animated.timing(this.state.scale, {
+          toValue: 0.2,
+          duration: 400,
+          easing: Easing.back()
+        })
+      ]),
+      Animated.parallel([
+        Animated.timing(this.state.xPosition, {
+          toValue: 50,
+          duration: 400,
+          easing: Easing.bounce
+        }),
+        Animated.timing(this.state.scale, {
+          toValue: 1,
+          duration: 400,
+          easing: Easing.bounce
+        })
+      ])
+      // Animated.spring(this.state.xPosition, {
+      //   toValue: 80
+      // })
+    ]).start(); // start the sequence group
+  }
+
   constructor(props) {
     super(props);
-    this.state = { showText: true };
 
     // Toggle the state every second
     setInterval(() => {
-      this.setState(previousState => {
-        return { showText: !previousState.showText };
-      });
-    }, 1000);
+      Animated.sequence([
+        Animated.parallel([
+          Animated.timing(this.state.xPosition, {
+            toValue: 200,
+            duration: 400,
+            easing: Easing.back()
+          }),
+          Animated.timing(this.state.scale, {
+            toValue: 0.2,
+            duration: 400,
+            easing: Easing.back()
+          })
+        ]),
+        Animated.parallel([
+          Animated.timing(this.state.xPosition, {
+            toValue: 50,
+            duration: 400,
+            easing: Easing.bounce
+          }),
+          Animated.timing(this.state.scale, {
+            toValue: 1,
+            duration: 400,
+            easing: Easing.bounce
+          })
+        ])
+        // Animated.spring(this.state.xPosition, {
+        //   toValue: 80
+        // })
+      ]).start(); // start the sequence group
+    }, 40000);
   }
 
   render() {
-    let display = this.state.showText ? this.props.text : " ";
+    let { xPosition } = this.state;
+    let { scale } = this.state;
+    // let display = this.state.showText ? this.props.text : " ";
     return (
-      <Image
-        source={pic}
-        style={{ width: 195, height: 225, marginBottom: 100 }}
-      />
+      <Animated.View // Special animatable View
+        style={{
+          ...this.props.style,
+          // animation: waggle 1s 3s forwards ease-outm,
+          marginBottom: xPosition,
+          transform: [
+            { scale: scale },
+            // { rotateY: xPosition },
+            { perspective: 1000 } // without this line this Animation will not render on Android while working fine on iOS
+          ]
+        }}
+      >
+        {this.props.children}
+      </Animated.View>
     );
   }
 }
@@ -41,13 +117,36 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <BounceImage />
-
+        <BounceImage
+          style={{
+            width: 240,
+            height: 120,
+            backgroundColor: "#316491",
+            borderRadius: 10
+          }}
+        >
+          <Text
+            style={{
+              fontSize: 28,
+              textAlign: "center",
+              margin: 10,
+              color: "#fff"
+            }}
+          >
+            {/* Today's menus: 30% LESS CO₂ emissions. */}
+            Heutige Menus: 30% WENIGER CO₂ Emissionen
+          </Text>
+        </BounceImage>
+        <Image
+          source={pic}
+          style={{ width: 195, height: 225, marginBottom: 100 }}
+        />
         <Button
           buttonStyle={{ backgroundColor: "#d0753b", borderRadius: 10 }}
           textStyle={{ textAlign: "center" }}
           onPress={this.handleSettingsPress}
-          title={`Touch to start`}
+          // title={`Touch to learn more`}
+          title={`Berühren den Bildschirm\n um mehr herauszufinden.`}
         />
       </View>
     );
