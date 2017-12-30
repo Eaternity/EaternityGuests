@@ -6,7 +6,7 @@ import Feed from "../screens/Feed";
 import Home from "../screens/Home";
 // import Settings from "../screens/Settings";
 import ScreenDetail from "../screens/ScreenDetail";
-// import Me from "../screens/Me";
+import HTMLDemo from "../config/HTMLDemo";
 
 export const FeedStack = StackNavigator({
   Feed: {
@@ -51,6 +51,9 @@ export const Root = StackNavigator(
     },
     Feed: {
       screen: FeedStack
+    },
+    HTMLDemo: {
+      screen: HTMLDemo
     }
   },
   {

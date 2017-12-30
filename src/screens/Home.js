@@ -15,40 +15,10 @@ import { Button, List, ListItem } from "react-native-elements";
 class BounceImage extends Component {
   state = {
     xPosition: new Animated.Value(50),
-    scale: new Animated.Value(0.5) // Initial value for opacity: 0
+    scale: new Animated.Value(1) // Initial value for opacity: 0
   };
 
-  componentDidMount() {
-    Animated.sequence([
-      Animated.parallel([
-        Animated.timing(this.state.xPosition, {
-          toValue: 200,
-          duration: 400,
-          easing: Easing.back()
-        }),
-        Animated.timing(this.state.scale, {
-          toValue: 0.2,
-          duration: 400,
-          easing: Easing.back()
-        })
-      ]),
-      Animated.parallel([
-        Animated.timing(this.state.xPosition, {
-          toValue: 50,
-          duration: 400,
-          easing: Easing.bounce
-        }),
-        Animated.timing(this.state.scale, {
-          toValue: 1,
-          duration: 400,
-          easing: Easing.bounce
-        })
-      ])
-      // Animated.spring(this.state.xPosition, {
-      //   toValue: 80
-      // })
-    ]).start(); // start the sequence group
-  }
+  componentDidMount() {}
 
   constructor(props) {
     super(props);

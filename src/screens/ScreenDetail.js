@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ScrollView, Dimensions } from "react-native";
+import { ScrollView, Dimensions, Image } from "react-native";
 import { Tile, List, ListItem } from "react-native-elements";
 import HTML from "react-native-render-html";
 
@@ -15,7 +15,7 @@ class ScreenDetail extends Component {
     return (
       <ScrollView>
         <Tile
-          imageSrc={{ uri: picture.large }}
+          imageSrc={{ uri: picture.large, cache: "default" }}
           featured
           title={title.toUpperCase()}
           caption={subtitle}

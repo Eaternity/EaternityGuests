@@ -10,7 +10,12 @@ class Feed extends Component {
   };
 
   handleSettingsPress = () => {
-    this.props.navigation.navigate("Home");
+    // this.props.navigation.navigate("Home");
+    this.props.navigation.goBack(null);
+  };
+
+  handleSettingsPress2 = () => {
+    this.props.navigation.navigate("HTMLDemo");
   };
 
   render() {
@@ -44,7 +49,6 @@ class Feed extends Component {
           {screens.map(screen => (
             <ListItem
               key={screen.id}
-              roundAvatar
               avatar={{ uri: screen.picture.thumbnail }}
               title={screen.title.toUpperCase()}
               subtitle={screen.subtitle}
@@ -61,6 +65,17 @@ class Feed extends Component {
           textStyle={{ textAlign: "center" }}
           onPress={this.handleSettingsPress}
           title={`Zurück zum Eingangsbildschirm`}
+        />
+
+        <Button
+          buttonStyle={{
+            backgroundColor: "#d0753b",
+            borderRadius: 10,
+            marginTop: 40
+          }}
+          textStyle={{ textAlign: "center" }}
+          onPress={this.handleSettingsPress2}
+          title={`Zur HTML Demo`}
         />
       </ScrollView>
     );
