@@ -105,7 +105,7 @@ export const screens = [
         "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-Award.jpg"
     },
     htmlContent: `
-      <iframe width="1024" height="768" src="https://frontend-dot-eaternity-cloud-2.appspot.com/" frameborder="0" allowfullscreen></iframe>
+      <iframe width="1024" height="768" src="https://frontend-dot-eaternity-app.appspot.com/" frameborder="0" allowfullscreen></iframe>
       </iframe>
     `
   },
