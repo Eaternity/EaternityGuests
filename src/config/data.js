@@ -59,6 +59,9 @@ export const screens = [
       thumbnail: require("./assets/Report-Icon-Restaurant.jpg")
     },
     htmlContent: `
+
+<iframe width="1024" height="718" src="http://batch-dot-eaternity-app.appspot.com/reports/?year=2017&month=11&customer=Apleona_DE&lang=de&target-audience=guest&kitchen-id=28159" frameborder="0" allowfullscreen></iframe>
+
     <h1>Inhalte PDF report zum Zertifikat Restaurant mit Erläuterungen (vom Vormonat)
 </h1>
     `
@@ -73,7 +76,8 @@ export const screens = [
       thumbnail: require("./assets/Report-Icon-Menu.jpg")
     },
     htmlContent: `
-    <h1>Inhalte PDF report zum Menu Zertifikat  mit Erläuterungen (vom Vormonat)</h1>
+
+          <iframe width="1024" height="718" src="http://batch-dot-eaternity-app.appspot.com/reports/?year=2017&month=11&customer=Apleona_DE&lang=de&target-audience=guest&kitchen-id=28159" frameborder="0" allowfullscreen></iframe>
     `
   },
   {
@@ -85,6 +89,8 @@ export const screens = [
       thumbnail: require("./assets/Report-Icon-Products.jpg")
     },
     htmlContent: `
+
+
     <br />
     <ul>
     <li>Was ist das Potential eines klimafreundlichen Menus</li>
