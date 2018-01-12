@@ -23,8 +23,8 @@ class Feed extends Component {
       <ScrollView>
         <View style={styles.container}>
           <Image
-            source={pic}
-            style={{ width: 205, height: 275, marginBottom: 40, marginTop: 40 }}
+            source={require("../config/assets/APLEONA_GruneKuche_Design_EntwurfA_Wortmarke.png")}
+            style={{ width: 354, height: 118, marginBottom: 40, marginTop: 40 }}
           />
           <Text
             style={{
@@ -49,7 +49,9 @@ class Feed extends Component {
           {screens.map(screen => (
             <ListItem
               key={screen.id}
-              avatar={{ uri: screen.picture.thumbnail }}
+              // avatar={{ uri: screen.picture.thumbnail }}
+              // avatar={require(screen.picture.thumbnail)}
+              avatar={screen.picture.thumbnail}
               title={screen.title.toUpperCase()}
               subtitle={screen.subtitle}
               onPress={() => this.onLearnMore(screen)}
@@ -58,16 +60,18 @@ class Feed extends Component {
         </List>
         <Button
           buttonStyle={{
-            backgroundColor: "#d0753b",
+            // backgroundColor: "#d0753b",
+            backgroundColor: "#000000",
             borderRadius: 10,
-            marginTop: 40
+            marginTop: 60,
+            marginBottom: 40
           }}
           textStyle={{ textAlign: "center" }}
           onPress={this.handleSettingsPress}
           title={`Zurück zum Eingangsbildschirm`}
         />
 
-        <Button
+        {/* <Button
           buttonStyle={{
             backgroundColor: "#d0753b",
             borderRadius: 10,
@@ -76,16 +80,11 @@ class Feed extends Component {
           textStyle={{ textAlign: "center" }}
           onPress={this.handleSettingsPress2}
           title={`Zur HTML Demo`}
-        />
+        /> */}
       </ScrollView>
     );
   }
 }
-
-let pic = {
-  uri:
-    "http://www.eaternity.org/assets/2015-11-05-Eaternity_logo_set/Eaternity-Award-big-DE.png"
-};
 
 const styles = StyleSheet.create({
   container: {
@@ -93,7 +92,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: "#ecf0f1"
+    backgroundColor: "#e9e9ee"
   }
 });
 

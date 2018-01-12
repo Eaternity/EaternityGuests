@@ -1,29 +1,36 @@
+import { problemCO2 } from "./assets/problem-CO2.jpg.b64.js";
+import { info } from "./assets/info.jpg.b64.js";
+import { problemShortCO2 } from "./assets/problem-short-CO2.jpg.b64.js";
+import { problemOnlyDE } from "./assets/problem-only-DE.jpg.b64.js";
+import { problemOnlyDE2 } from "./assets/problem-only-DE2.jpg.b64.js";
+import { solutionCO2 } from "./assets/solution-CO2.jpg.b64.js";
+// import { parallax } from "./assets/home-parallax.jpg.b64.js";
+
 export const screens = [
   {
     title: "Essen und Klimawandel",
     subtitle: "Welcher Herausforderung müssen wir uns zum Klimawandel stellen?",
     id: "problem",
     picture: {
-      large: "http://www.eaternity.org/img/home/home-parallax.jpg",
-      thumbnail:
-        "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-CO2.jpg"
+      large: require("./assets/home-parallax.jpg"),
+      thumbnail: require("./assets/Report-Icon-CO2.jpg")
     },
     htmlContent: `
 
-    <img src="http://www.eaternity.org/assets/EaternityGuests/problem-short-CO2.jpg" />
+    <img src="${problemShortCO2}" />
 
     <p>Unsere Nahrungsmittelversorgungskette ist für 1/3 der weltweit verursachten Treibhausgase verantwortlich. Kein Fortschritt im Transportsektor und keine Energierevolution kann den Klimawandel so effizient verlangsamen wie eine intelligente Lebensmittelwahl. Die wirkungsvollsten Antworten auf das Pariser Klimaabkommen verstecken sich in unseren Kühlschränken; sie sind also weder in unseren Garagen noch in unseren Heizungssystemen zu finden!</p>
 
     <p>Würden alle Europäer dreimal pro Woche klimafreundlich essen, käme die erzielte Klimawirkung dem Wegfall von 1/6 Autos gleich. Momentan verursacht das Essensverhalten pro Person jährlich rund drei Tonnen CO₂.</p>
 
-    <p>Mit überlegten, saisonalen und regionalen Lebensmittelentscheidungen können wir diese Emissionen um mehr als 50 % verringern. Veränderungen im Lebensmittelkonsumverhalten ist der effizienteste Weg, Treibhausgasemissionen zu reduzieren und den vom Pariser Klimaabkommen festgelegten Grenzwert eines maximalen Temperaturanstieges von 2 Grad einzuhalten.</p>
+    <p>Mit überlegten, saisonalen und regionalen Lebensmittelentscheidungen können wir diese Emissionen um mehr als 50% verringern. Veränderungen im Lebensmittelkonsumverhalten ist der effizienteste Weg, Treibhausgasemissionen zu reduzieren und den vom Pariser Klimaabkommen festgelegten Grenzwert eines maximalen Temperaturanstieges von 2 Grad einzuhalten.</p>
 
 
+    <img src="${problemCO2}" />
 
-    <img src="http://www.eaternity.org/assets/EaternityGuests/problem-CO2.jpg" />
-    <img src="http://www.eaternity.org/assets/EaternityGuests/info.jpg" />
+    <img src="${info}" />
 
-    <img src="http://www.eaternity.org/assets/EaternityGuests/solution-CO2.jpg" />
+    <img src="${solutionCO2}" />
 
 
     <p>Extreme Wetterereignisse wie Starkniederschläge, Hurrikane, Hitzewellen und Dürren werden mit dem Klimawandel häfiger und stärker. Folgen davon sind Erdrutsche, schmelzender Permafrost, Versauerung der Meere, Verlust von Pflanzen- und Tierarten, Ausbreitung von Krankheiten, Ertragseinbussen und zunehmende Wasserknappheit. Polarkappen und Alpengletscher schmelzen rasant, was den Meeresspiegel ansteigen lässt und somit zu Überschwemmung und Erosion von Inseln und Küstengebieten führt. Der Klimawandel ist kein Zukunftsereignis, sondern ist bereits spürbar im Gang. Je höher wir die globale Temperatur ansteigen lassen, desto höher wird der zu bezahlende Preis sein. Es gibt weltweite Bemühungen, den Temperaturanstieg zu begrenzen. An der Pariser Klimakonferenz im Jahr 2015 wurde das Ziel vereinbart, die Klimaerwärmung auf 2 Grad zu beschränken. Diese Bemühungen werden uns nicht komplett von Schäden bewahren, vielmehr geht es dabei darum, die Konsequenzen soweit zu begrenzen, dass die Menschheit damit umgehen kann.</p>
@@ -39,12 +46,8 @@ export const screens = [
     - Folgen auf die Nahrungsmittelversorgung
     - Ziel zur Reduktion
 
-    <img src="http://www.eaternity.org/assets/EaternityGuests/problem-only-DE2.jpg" />
+    <img src="${problemOnlyDE2}" />
 
-    <h1>This HTML snippet is now rendered with native components !</h1>
-    <h2>Enjoy a webview-free and blazing fast application</h2>
-    <img src="https://i.imgur.com/dHLmxfO.jpg?2" />
-    <em style="textAlign: center;">Look at how happy this native cat is</em>
     `
   },
   {
@@ -53,8 +56,7 @@ export const screens = [
     id: "restaurant",
     picture: {
       large: "",
-      thumbnail:
-        "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-Restaurant.jpg"
+      thumbnail: require("./assets/Report-Icon-Restaurant.jpg")
     },
     htmlContent: `
     <h1>Inhalte PDF report zum Zertifikat Restaurant mit Erläuterungen (vom Vormonat)
@@ -68,8 +70,7 @@ export const screens = [
     id: "menus",
     picture: {
       large: "",
-      thumbnail:
-        "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-Menu.jpg"
+      thumbnail: require("./assets/Report-Icon-Menu.jpg")
     },
     htmlContent: `
     <h1>Inhalte PDF report zum Menu Zertifikat  mit Erläuterungen (vom Vormonat)</h1>
@@ -81,8 +82,7 @@ export const screens = [
     id: "award",
     picture: {
       large: "http://www.eaternity.org/img/eat-at-home/eatathome-parallax.jpg",
-      thumbnail:
-        "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-Products.jpg"
+      thumbnail: require("./assets/Report-Icon-Products.jpg")
     },
     htmlContent: `
     <br />
@@ -95,30 +95,29 @@ export const screens = [
     </ul>
     `
   },
-  {
-    title: "Zugang zum CO₂-Rechner",
-    subtitle: "Eigene Rezepte berechnen und mehr zum Thema erfahren.",
-    id: "app",
-    picture: {
-      large: "http://www.eaternity.org/img/home/screens.png",
-      thumbnail:
-        "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-Award.jpg"
-    },
-    htmlContent: `
-      <iframe width="1024" height="768" src="https://frontend-dot-eaternity-app.appspot.com/" frameborder="0" allowfullscreen></iframe>
-      </iframe>
-    `
-  },
+  // {
+  //   title: "Zugang zum CO₂-Rechner",
+  //   subtitle: "Eigene Rezepte berechnen und mehr zum Thema erfahren.",
+  //   id: "app",
+  //   picture: {
+  //     large: "http://www.eaternity.org/img/home/screens.png",
+  //     thumbnail: require("./assets/Report-Icon-Award.jpg")
+  //   },
+  //   htmlContent: `
+  //     <iframe width="1024" height="768" src="https://xxx.appspot.com/" frameborder="0" allowfullscreen></iframe>
+  //   `
+  // },
   {
     title: "An der Verlosung teilnehmen",
     subtitle: "Rette das Klima und gewinne.",
     id: "win",
     picture: {
       large: "http://www.eaternity.org/img/home/screens.png",
-      thumbnail:
-        "http://www.eaternity.org/assets/EaternityGuests/Report-Icon-Certificate.jpg"
+      thumbnail: require("./assets/Report-Icon-Certificate.jpg")
     },
     htmlContent: `
+
+    <iframe width="1024" height="718" src="https://manuelklarmann.typeform.com/to/QBMh5I" frameborder="0" allowfullscreen></iframe>
 
 
     <p>Eaternity hat einen ausgeprägten Appetit auf Veränderung. Wir etablieren klimafreundliche Mahlzeiten in der Gesellschaft. Eaternity hat eine innovative Software entwickelt, mit welcher Restaurants den CO₂-Fussabdruck ihrer Mahlzeiten und Einkäufen automatisch berechnen und verbessern können. Parallel dazu können alle ihre persönlichen ernährungsbezogenen CO₂-Emissionen mit Eaternitys öffentlich zugänglicher Web App überprüfen.</p>

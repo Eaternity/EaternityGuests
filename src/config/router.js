@@ -12,7 +12,7 @@ export const FeedStack = StackNavigator({
   Feed: {
     screen: Feed,
     navigationOptions: {
-      title: "Climate Friendly Award"
+      title: "Apleona FoodPRINT"
     }
   },
   Details: {

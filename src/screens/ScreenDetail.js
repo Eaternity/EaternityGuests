@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ScrollView, Dimensions, Image } from "react-native";
+import { ScrollView, Dimensions, Image, StyleSheet, View } from "react-native";
 import { Tile, List, ListItem } from "react-native-elements";
 import HTML from "react-native-render-html";
 
@@ -15,15 +15,26 @@ class ScreenDetail extends Component {
     return (
       <ScrollView>
         <Tile
-          imageSrc={{ uri: picture.large, cache: "default" }}
+          imageSrc={picture.large}
           featured
           title={title.toUpperCase()}
           caption={subtitle}
         />
-        <HTML
-          html={htmlContent}
-          imagesMaxWidth={Dimensions.get("window").width}
-        />
+        <View style={{ backgroundColor: "#ffffff" }}>
+          <HTML
+            html={htmlContent}
+            imagesMaxWidth={Dimensions.get("window").width}
+            tagsStyles={{
+              p: {
+                padding: 30,
+                paddingLeft: 60,
+                paddingRight: 140,
+                fontSize: 20,
+                fontWeight: "300"
+              }
+            }}
+          />
+        </View>
       </ScrollView>
     );
   }

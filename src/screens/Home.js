@@ -108,11 +108,11 @@ class Home extends Component {
           </Text>
         </BounceImage>
         <Image
-          source={pic}
-          style={{ width: 245, height: 300, marginBottom: 100 }}
+          source={require("../config/assets/APLEONA_GruneKuche_Design_EntwurfA_Wortmarke.png")}
+          style={{ width: 531, height: 177, marginBottom: 100, marginTop: 40 }}
         />
         <Button
-          buttonStyle={{ backgroundColor: "#d0753b", borderRadius: 10 }}
+          buttonStyle={{ backgroundColor: "#000000", borderRadius: 10 }}
           textStyle={{ textAlign: "center" }}
           onPress={this.handleSettingsPress}
           // title={`Touch to learn more`}
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: "#ecf0f1"
+    backgroundColor: "#e9e9ee"
   }
 });
 
