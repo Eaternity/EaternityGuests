@@ -5,10 +5,12 @@
     "sdkVersion": "23.0.0",
     "name": "Eaternity Guests",
     "slug": "EaternityGuests",
-    "privacy": "unlisted"
-  },
-  "ios": {
-    "bundleIdentifier": "your bundle identifier",
-    "supportsTablet": true
+    "privacy": "unlisted",
+    "icon": "./src/config/assets/Icon@2x.png",
+    "version": "0.0.4",
+    "ios": {
+      "bundleIdentifier": "com.eaternity.eaternityguests",
+      "supportsTablet": true
+    }
   }
 }

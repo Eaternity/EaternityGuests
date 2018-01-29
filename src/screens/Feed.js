@@ -15,7 +15,7 @@ class Feed extends Component {
   };
 
   handleSettingsPress2 = () => {
-    this.props.navigation.navigate("HTMLDemo");
+    this.props.navigation.navigate("pdfDemo");
   };
 
   render() {
@@ -69,6 +69,17 @@ class Feed extends Component {
           textStyle={{ textAlign: "center" }}
           onPress={this.handleSettingsPress}
           title={`Zurück zum Eingangsbildschirm`}
+        />
+
+        <Button
+          buttonStyle={{
+            backgroundColor: "#d0753b",
+            borderRadius: 10,
+            marginTop: 40
+          }}
+          textStyle={{ textAlign: "center" }}
+          onPress={this.handleSettingsPress2}
+          title={`Zur PDF Demo`}
         />
 
         {/* <Button
