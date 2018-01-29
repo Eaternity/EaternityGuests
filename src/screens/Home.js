@@ -107,6 +107,24 @@ class Home extends Component {
             Heutige Menus: 30% WENIGER CO₂ Emissionen
           </Text>
         </BounceImage>
+        <Text
+          style={{
+            fontSize: 32,
+            textAlign: "center",
+            marginTop: 10
+          }}
+        >
+          Herzlich Willkommen
+        </Text>
+        <Text
+          style={{
+            fontSize: 32,
+            textAlign: "center",
+            margin: 10
+          }}
+        >
+          zum klimafreundlichen Konzept
+        </Text>
         <Image
           source={require("../config/assets/APLEONA_GruneKuche_Design_EntwurfA_Wortmarke.png")}
           style={{ width: 531, height: 177, marginBottom: 100, marginTop: 40 }}
@@ -116,7 +134,7 @@ class Home extends Component {
           textStyle={{ textAlign: "center" }}
           onPress={this.handleSettingsPress}
           // title={`Touch to learn more`}
-          title={`Berühren den Bildschirm\n um mehr herauszufinden.`}
+          title={`Berühren Sie hier\n um mehr herauszufinden.`}
         />
       </View>
     );

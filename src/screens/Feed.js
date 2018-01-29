@@ -33,7 +33,7 @@ class Feed extends Component {
               margin: 10
             }}
           >
-            Wir retten das Klima.
+            Essen für ein gutes Klima.
           </Text>
           <Text
             style={{

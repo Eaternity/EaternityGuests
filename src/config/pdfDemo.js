@@ -14,7 +14,8 @@ import Pdf from "react-native-pdf";
 export default class PDFExample extends React.Component {
   render() {
     const source = {
-      uri: "http://samples.leanpub.com/thereactnativebook-sample.pdf",
+      uri:
+        "http://www.eaternity.ch/assets/EaternityGuests/DE-2017-12-28104-Gast.pdf",
       cache: true
     };
     //const source = require('./test.pdf');  // ios only

@@ -13,7 +13,7 @@ export const FeedStack = StackNavigator({
   Feed: {
     screen: Feed,
     navigationOptions: {
-      title: "Apleona FoodPRINT"
+      title: "Apleona HSG Culinaress"
     }
   },
   Details: {
