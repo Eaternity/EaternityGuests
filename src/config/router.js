@@ -21,6 +21,12 @@ export const FeedStack = StackNavigator({
     navigationOptions: ({ navigation }) => ({
       title: navigation.state.params.title.toUpperCase()
     })
+  },
+  pdfDemo: {
+    screen: pdfDemo,
+    navigationOptions: {
+      title: "Monatlicher Restaurant Report"
+    }
   }
 });
 
