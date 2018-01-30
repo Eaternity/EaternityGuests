@@ -52,7 +52,8 @@
 				<dict>
 					<key>fileNames</key>
 					<array>
-						<string>~/workspace/Eaternity-Native/EaternityGuests/src/config/assets/home-parallax.jpg</string>
+						<string>~/workspace/Eaternity-Native/EaternityGuests/src/config/assets/eaternity.jpg</string>
+						<string>~/workspace/Eaternity-Native/EaternityGuests/src/config/assets/apleona.jpg</string>
 					</array>
 				</dict>
 				<key>BundleIdentifier</key>
@@ -102,8 +103,6 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
@@ -289,7 +288,7 @@ done</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>2C19B94D-50D1-4541-909E-CC57BC5A4547</key>
+		<key>019B45EF-6536-4722-A790-96F28C6D0ACC</key>
 		<dict>
 			<key>from</key>
 			<string>EB79C754-ADFB-4938-A8AA-3A371AB547DC - EB79C754-ADFB-4938-A8AA-3A371AB547DC</string>
