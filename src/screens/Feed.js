@@ -24,8 +24,14 @@ class Feed extends Component {
         <View style={styles.container}>
           <Image
             source={require("../config/assets/APLEONA_GruneKuche_Design_EntwurfA_Wortmarke.png")}
-            style={{ width: 354, height: 118, marginBottom: 40, marginTop: 40 }}
+            style={{
+              width: 354,
+              height: 118,
+              marginBottom: 40,
+              marginTop: 40
+            }}
           />
+
           <Text
             style={{
               fontSize: 40,
@@ -33,7 +39,7 @@ class Feed extends Component {
               margin: 10
             }}
           >
-            Wir retten das Klima.
+            Essen für ein gutes Klima.
           </Text>
           <Text
             style={{
@@ -45,6 +51,16 @@ class Feed extends Component {
             Finde heraus wie und warum.
           </Text>
         </View>
+        <Button
+          buttonStyle={{
+            backgroundColor: "#d0753b",
+            borderRadius: 10,
+            marginTop: 40
+          }}
+          textStyle={{ textAlign: "center" }}
+          onPress={this.handleSettingsPress2}
+          title={`CO₂ Bilanz dieses Restaurants`}
+        />
         <List>
           {screens.map(screen => (
             <ListItem
@@ -61,7 +77,7 @@ class Feed extends Component {
         <Button
           buttonStyle={{
             // backgroundColor: "#d0753b",
-            backgroundColor: "#000000",
+            backgroundColor: "#aaaaaa",
             borderRadius: 10,
             marginTop: 60,
             marginBottom: 40
@@ -69,17 +85,6 @@ class Feed extends Component {
           textStyle={{ textAlign: "center" }}
           onPress={this.handleSettingsPress}
           title={`Zurück zum Eingangsbildschirm`}
-        />
-
-        <Button
-          buttonStyle={{
-            backgroundColor: "#d0753b",
-            borderRadius: 10,
-            marginTop: 40
-          }}
-          textStyle={{ textAlign: "center" }}
-          onPress={this.handleSettingsPress2}
-          title={`Zur PDF Demo`}
         />
 
         {/* <Button

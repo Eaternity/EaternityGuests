@@ -13,11 +13,12 @@ import Pdf from "react-native-pdf";
 
 export default class PDFExample extends React.Component {
   render() {
-    const source = {
-      uri: "http://samples.leanpub.com/thereactnativebook-sample.pdf",
-      cache: true
-    };
-    //const source = require('./test.pdf');  // ios only
+    // const source = {
+    //   uri:
+    //     "http://www.eaternity.ch/assets/EaternityGuests/DE-2017-12-28104-Gast.pdf",
+    //   cache: true
+    // };
+    const source = require("./assets/report.pdf"); // ios only
     //const source = {uri:'bundle-assets://test.pdf'};
 
     //const source = {uri:'file:///sdcard/test.pdf'};
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     alignItems: "center",
-    marginTop: 25
+    marginTop: 0
   },
   pdf: {
     flex: 1,

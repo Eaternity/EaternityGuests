@@ -13,7 +13,7 @@ export const FeedStack = StackNavigator({
   Feed: {
     screen: Feed,
     navigationOptions: {
-      title: "Apleona FoodPRINT"
+      title: "Apleona HSG Culinaress"
     }
   },
   Details: {
@@ -21,6 +21,12 @@ export const FeedStack = StackNavigator({
     navigationOptions: ({ navigation }) => ({
       title: navigation.state.params.title.toUpperCase()
     })
+  },
+  pdfDemo: {
+    screen: pdfDemo,
+    navigationOptions: {
+      title: "Monatlicher Restaurant Report"
+    }
   }
 });
 
@@ -55,9 +61,6 @@ export const Root = StackNavigator(
     },
     HTMLDemo: {
       screen: HTMLDemo
-    },
-    pdfDemo: {
-      screen: pdfDemo
     }
   },
   {

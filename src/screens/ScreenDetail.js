@@ -14,13 +14,19 @@ class ScreenDetail extends Component {
 
     return (
       <ScrollView>
-        <Tile
+        {/* <Tile
           imageSrc={picture.large}
           featured
           title={title.toUpperCase()}
           caption={subtitle}
-        />
-        <View style={{ backgroundColor: "#ffffff" }}>
+        /> */}
+        <View
+          style={{
+            backgroundColor: "#ffffff",
+            paddingBottom: 60,
+            paddingTop: 60
+          }}
+        >
           <HTML
             html={htmlContent}
             imagesMaxWidth={Dimensions.get("window").width}
@@ -28,9 +34,16 @@ class ScreenDetail extends Component {
               p: {
                 padding: 30,
                 paddingLeft: 60,
-                paddingRight: 140,
+                paddingRight: 100,
                 fontSize: 20,
                 fontWeight: "300"
+              },
+              h1: {
+                fontSize: 30,
+                fontWeight: "500",
+                paddingLeft: 60,
+                paddingRight: 60,
+                paddingTop: 30
               }
             }}
           />
