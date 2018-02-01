@@ -5,6 +5,6 @@
 	<key>EXPO_RUNTIME_VERSION</key>
 	<string>2.1.4</string>
 	<key>developmentUrl</key>
-	<string>expc064e15d80af4098b68d99bcf1db1315://yg-qg6.mklarmann.eaternityguests.exp.direct:80</string>
+	<string>expc064e15d80af4098b68d99bcf1db1315://localhost:19000</string>
 </dict>
 </plist>
