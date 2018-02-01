@@ -55,9 +55,6 @@ export const Root = StackNavigator(
     },
     HTMLDemo: {
       screen: HTMLDemo
-    },
-    pdfDemo: {
-      screen: pdfDemo
     }
   },
   {
