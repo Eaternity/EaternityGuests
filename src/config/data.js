@@ -66,7 +66,7 @@ export const screens = [
     },
     htmlContent: `
 
-  <iframe width="1024" height="1024" src="http://www.eaternity.org/assets/EaternityGuests/reports/DE-2017-12-28159-Gast.htm" frameborder="0" allowfullscreen></iframe>
+  <iframe width="100%" height="960" src="http://www.eaternity.org/assets/EaternityGuests/reports/DE-2017-12-28159-Gast.htm" frameborder="0" allowfullscreen></iframe>
 
       `
   },
