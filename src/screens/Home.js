@@ -97,7 +97,7 @@ class BounceImage extends Component {
         //   toValue: 80
         // })
       ]).start(); // start the sequence group
-    }, 4000); // FIXME: remove a magnitude before release
+    }, 4000); // change to 4000 before release
   }
 
   render() {
@@ -138,6 +138,7 @@ class Home extends Component {
   handleSettingsPress = () => {
     this.props.navigation.navigate("Feed");
   };
+
   render() {
     return (
       <View style={styles.container}>

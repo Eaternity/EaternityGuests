@@ -7,7 +7,28 @@ import { screens } from "../config/data";
 class Feed extends Component {
   onLearnMore = screen => {
     this.props.navigation.navigate("Details", { ...screen });
+
+    console.log("there was an interaction");
+    this.setState({ inactive: false });
+    var interval = setTimeout(() => {
+      this.setState({ inactive: true });
+    }, 60000);
   };
+
+  componentDidMount() {
+    this.setState({ inactive: true });
+    var intervalId = setInterval(() => {
+      console.log(this.state.inactive);
+      if (this.state.inactive) {
+        this.props.navigation.goBack(null);
+      }
+    }, 10000);
+    this.setState({ intervalId: intervalId });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.intervalId);
+  }
 
   handleSettingsPress = () => {
     // this.props.navigation.navigate("Home");
