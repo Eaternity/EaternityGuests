@@ -23,8 +23,8 @@ class ScreenDetail extends Component {
         <View
           style={{
             backgroundColor: "#ffffff",
-            paddingBottom: 60,
-            paddingTop: 60
+            paddingBottom: 0,
+            paddingTop: 0
           }}
         >
           <HTML

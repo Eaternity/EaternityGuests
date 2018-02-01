@@ -56,22 +56,20 @@ export const screens = [
 
     `
   },
-  //   {
-  //     title: "CO₂ Bilanz dieses Restaurants",
-  //     subtitle: "Wieviel Emissionen wurden im Monat Dezember verursacht?",
-  //     id: "restaurant",
-  //     picture: {
-  //       large: "",
-  //       thumbnail: require("./assets/Report-Icon-Restaurant.jpg")
-  //     },
-  //     htmlContent: `
-  //
-  // <iframe width="1024" height="718" src="http://batch-dot-eaternity-app.appspot.com/reports/?year=2017&month=11&customer=Apleona_DE&lang=de&target-audience=guest&kitchen-id=28159" frameborder="0" allowfullscreen></iframe>
-  //
-  //     <h1>Inhalte PDF report zum Zertifikat Restaurant mit Erläuterungen (vom Vormonat)
-  // </h1>
-  //     `
-  //   },
+  {
+    title: "CO₂ Bilanz dieses Restaurants",
+    subtitle: "Wieviel Emissionen wurden im Monat Dezember verursacht?",
+    id: "restaurant",
+    picture: {
+      large: "",
+      thumbnail: require("./assets/Report-Icon-Restaurant.jpg")
+    },
+    htmlContent: `
+
+  <iframe width="1024" height="1024" src="http://www.eaternity.org/assets/EaternityGuests/reports/DE-2017-12-28159-Gast.htm" frameborder="0" allowfullscreen></iframe>
+
+      `
+  },
   {
     title: "CO₂ Bilanz der Menus im Angebot",
     subtitle:

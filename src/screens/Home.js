@@ -35,7 +35,8 @@ class BounceImage extends Component {
       require("../config/assets/Report-Icon-Certificate.jpg"),
       require("../config/assets/Report-Icon-CO2.jpg"),
       require("../config/assets/Report-Icon-Menu.jpg"),
-      require("../config/assets/Report-Icon-Award.jpg")
+      require("../config/assets/Report-Icon-Award.jpg"),
+      require("../config/assets/Report-Icon-Restaurant.jpg")
       // require("../config/assets/problem-CO2.jpg.b64.js"),
       // require("../config/assets/info.jpg.b64.js"),
       // require("../config/assets/problem-short-CO2.jpg.b64.js"),
@@ -160,6 +161,24 @@ class Home extends Component {
             Hüpfende Information
           </Text>
         </BounceImage>
+        <Text
+          style={{
+            fontSize: 32,
+            textAlign: "center",
+            marginTop: 10
+          }}
+        >
+          Herzlich Willkommen
+        </Text>
+        <Text
+          style={{
+            fontSize: 32,
+            textAlign: "center",
+            margin: 10
+          }}
+        >
+          zum klimafreundlichen Konzept
+        </Text>
         <Image
           source={require("../config/assets/APLEONA_GruneKuche_Design_EntwurfA_Wortmarke.png")}
           style={{

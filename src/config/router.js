@@ -7,13 +7,13 @@ import Home from "../screens/Home";
 // import Settings from "../screens/Settings";
 import ScreenDetail from "../screens/ScreenDetail";
 import HTMLDemo from "../config/HTMLDemo";
-import pdfDemo from "../config/pdfDemo";
+// import pdfDemo from "../config/pdfDemo";
 
 export const FeedStack = StackNavigator({
   Feed: {
     screen: Feed,
     navigationOptions: {
-      title: "Apleona FoodPRINT"
+      title: "Apleona HSG Culinaress"
     }
   },
   Details: {
@@ -21,13 +21,13 @@ export const FeedStack = StackNavigator({
     navigationOptions: ({ navigation }) => ({
       title: navigation.state.params.title.toUpperCase()
     })
-  },
-  pdfDemo: {
-    screen: pdfDemo,
-    navigationOptions: {
-      title: "Monatlicher Restaurant Report"
-    }
   }
+  // pdfDemo: {
+  //   screen: pdfDemo,
+  //   navigationOptions: {
+  //     title: "Monatlicher Restaurant Report"
+  //   }
+  // }
 });
 
 // export const Tabs = TabNavigator({

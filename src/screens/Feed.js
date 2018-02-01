@@ -39,7 +39,7 @@ class Feed extends Component {
               margin: 10
             }}
           >
-            Wir retten das Klima.
+            Besser Essen fürs Klima.
           </Text>
           <Text
             style={{
@@ -51,7 +51,7 @@ class Feed extends Component {
             Finde heraus wie und warum.
           </Text>
         </View>
-        <Button
+        {/* <Button
           buttonStyle={{
             backgroundColor: "#d0753b",
             borderRadius: 10,
@@ -60,7 +60,7 @@ class Feed extends Component {
           textStyle={{ textAlign: "center" }}
           onPress={this.handleSettingsPress2}
           title={`CO₂ Bilanz dieses Restaurants`}
-        />
+        /> */}
         <List>
           {screens.map(screen => (
             <ListItem
