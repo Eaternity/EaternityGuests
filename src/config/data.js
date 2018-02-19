@@ -21,9 +21,10 @@ export const screens = [
     subtitle: "Welcher Herausforderung müssen wir uns zum Klimawandel stellen?",
     id: "problem",
     picture: {
-      large: require("./assets/home-parallax.jpg"),
+      large: require("./assets/essen_und_klima_feld.jpg"),
       thumbnail: require("./assets/Report-Icon-CO2.jpg")
     },
+    content: `<Text>test</Text>`,
     htmlContent: `
 
     <img src="${problemShortCO2}" />
@@ -61,7 +62,6 @@ export const screens = [
     subtitle: "Wieviel Emissionen wurden im Monat Dezember verursacht?",
     id: "restaurant",
     picture: {
-      large: "",
       thumbnail: require("./assets/Report-Icon-Restaurant.jpg")
     },
     htmlContent: `

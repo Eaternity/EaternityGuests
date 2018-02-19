@@ -71,7 +71,7 @@ class BounceImage extends Component {
       Animated.sequence([
         Animated.parallel([
           Animated.timing(this.state.xPosition, {
-            toValue: 200,
+            toValue: 100,
             duration: 400,
             easing: Easing.back()
           }),
@@ -142,26 +142,6 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <BounceImage
-          style={{
-            width: 240,
-            height: 120,
-            backgroundColor: "#316491",
-            borderRadius: 10
-          }}
-        >
-          <Text
-            style={{
-              fontSize: 28,
-              textAlign: "center",
-              margin: 10,
-              color: "#fff"
-            }}
-          >
-            {/* Today's menus: 30% LESS CO₂ emissions. */}
-            Hüpfende Information
-          </Text>
-        </BounceImage>
         <Text
           style={{
             fontSize: 32,
@@ -189,13 +169,15 @@ class Home extends Component {
             marginTop: 40
           }}
         />
-        <Button
-          buttonStyle={{ backgroundColor: "#aaaaaa", borderRadius: 10 }}
-          textStyle={{ textAlign: "center" }}
-          onPress={this.handleSettingsPress}
-          // title={`Touch to learn more`}
-          title={`Tippen Sie hier\n um mehr herauszufinden.`}
-        />
+        <BounceImage>
+          <Button
+            buttonStyle={{ backgroundColor: "#aaaaaa", borderRadius: 10 }}
+            textStyle={{ textAlign: "center" }}
+            onPress={this.handleSettingsPress}
+            // title={`Touch to learn more`}
+            title={`Tippen Sie hier\n um mehr herauszufinden.`}
+          />
+        </BounceImage>
       </View>
     );
   }

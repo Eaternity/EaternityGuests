@@ -3,18 +3,35 @@ import { ScrollView, Dimensions, Image, StyleSheet, View } from "react-native";
 import { Tile, List, ListItem } from "react-native-elements";
 import HTML from "react-native-render-html";
 
+// function TileExtra(props) {
+//   if (typeof props.picture.large !== "undefined") {
+//     return (
+//       <Tile
+//         imageSrc={props.picture.large}
+//         featured
+//         title={props.title.toUpperCase()}
+//         caption={props.subtitle}
+//       />
+//     );
+//   }
+//   return (
+//     <Tile featured title={props.title.toUpperCase()} caption={props.subtitle} />
+//   );
+// }
+
 class ScreenDetail extends Component {
   render() {
     const {
       picture,
       title,
       subtitle,
-      htmlContent
+      htmlContent,
+      content
     } = this.props.navigation.state.params;
 
     return (
       <ScrollView>
-        {/* <Tile
+        {/* <TileExtra
           imageSrc={picture.large}
           featured
           title={title.toUpperCase()}
@@ -27,6 +44,7 @@ class ScreenDetail extends Component {
             paddingTop: 0
           }}
         >
+          {content}
           <HTML
             html={htmlContent}
             imagesMaxWidth={Dimensions.get("window").width}

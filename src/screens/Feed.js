@@ -69,7 +69,7 @@ class Feed extends Component {
               textAlign: "center"
             }}
           >
-            Finde heraus wie und warum.
+            Finden Sie heraus wie und warum.
           </Text>
         </View>
         {/* <Button
