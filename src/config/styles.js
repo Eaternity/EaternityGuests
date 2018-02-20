@@ -1,13 +1,15 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native'
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    padding: "5%"
+    padding: '5%',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   title: {
     fontSize: 16,
-    textAlign: "center",
+    textAlign: 'center',
     marginBottom: 30
   },
   examplesListContainer: {
@@ -18,12 +20,12 @@ export default StyleSheet.create({
     height: 50,
     padding: 10,
     marginHorizontal: 10,
-    backgroundColor: "teal",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: 'teal',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   exampleBtnLabel: {
     fontSize: 13,
-    color: "white"
+    color: 'white'
   }
-});
+})

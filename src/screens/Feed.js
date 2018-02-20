@@ -1,50 +1,63 @@
-import Expo, { Constants } from "expo";
-import React, { Component } from "react";
-import { Text, View, ScrollView, Image, StyleSheet } from "react-native";
-import { List, ListItem, Button } from "react-native-elements";
-import { screens } from "../config/data";
+import {Constants} from 'expo'
+import {List, ListItem, Button} from 'react-native-elements'
+import {Text, View, ScrollView, Image, StyleSheet} from 'react-native'
+import PropTypes from 'prop-types'
+import React, {Component} from 'react'
+
+import {screens} from '../config/data'
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#e9e9ee'
+  }
+})
 
 class Feed extends Component {
-  onLearnMore = screen => {
-    this.props.navigation.navigate("Details", { ...screen });
+  static propTypes = {
+    navigation: PropTypes.object.isRequired
+  }
 
-    console.log("there was an interaction");
-    this.setState({ inactive: false });
-    var interval = setTimeout(() => {
-      this.setState({ inactive: true });
-    }, 60000);
-  };
+  onLearnMore = screen => {
+    this.props.navigation.navigate('Details', {...screen})
+
+    console.log('there was an interaction')
+    this.setState({inactive: false})
+  }
 
   componentDidMount() {
-    this.setState({ inactive: true });
+    this.setState({inactive: true})
     var intervalId = setInterval(() => {
-      console.log(this.state.inactive);
+      console.log(this.state.inactive)
       if (this.state.inactive) {
-        this.props.navigation.goBack(null);
+        this.props.navigation.goBack(null)
       }
-    }, 10000);
-    this.setState({ intervalId: intervalId });
+    }, 10000)
+    this.setState({intervalId: intervalId})
   }
 
   componentWillUnmount() {
-    clearInterval(this.state.intervalId);
+    clearInterval(this.state.intervalId)
   }
 
   handleSettingsPress = () => {
     // this.props.navigation.navigate("Home");
-    this.props.navigation.goBack(null);
-  };
+    this.props.navigation.goBack(null)
+  }
 
   handleSettingsPress2 = () => {
     // this.props.navigation.navigate("pdfDemo");
-  };
+  }
 
   render() {
     return (
       <ScrollView>
         <View style={styles.container}>
           <Image
-            source={require("../config/assets/APLEONA_GruneKuche_Design_EntwurfA_Wortmarke.png")}
+            source={require('../config/assets/APLEONA_GruneKuche_Design_EntwurfA_Wortmarke.png')}
             style={{
               width: 354,
               height: 118,
@@ -56,7 +69,7 @@ class Feed extends Component {
           <Text
             style={{
               fontSize: 40,
-              textAlign: "center",
+              textAlign: 'center',
               margin: 10
             }}
           >
@@ -66,7 +79,7 @@ class Feed extends Component {
             style={{
               marginBottom: 40,
               fontSize: 18,
-              textAlign: "center"
+              textAlign: 'center'
             }}
           >
             Finden Sie heraus wie und warum.
@@ -83,27 +96,29 @@ class Feed extends Component {
           title={`CO₂ Bilanz dieses Restaurants`}
         /> */}
         <List>
-          {screens.map(screen => (
-            <ListItem
-              key={screen.id}
-              // avatar={{ uri: screen.picture.thumbnail }}
-              // avatar={require(screen.picture.thumbnail)}
-              avatar={screen.picture.thumbnail}
-              title={screen.title.toUpperCase()}
-              subtitle={screen.subtitle}
-              onPress={() => this.onLearnMore(screen)}
-            />
-          ))}
+          {screens.map(screen => {
+            return (
+              <ListItem
+                key={screen.id}
+                // avatar={{ uri: screen.picture.thumbnail }}
+                // avatar={require(screen.picture.thumbnail)}
+                avatar={screen.picture.thumbnail}
+                title={screen.title.toUpperCase()}
+                subtitle={screen.subtitle}
+                onPress={() => this.onLearnMore(screen)}
+              />
+            )
+          })}
         </List>
         <Button
           buttonStyle={{
             // backgroundColor: "#d0753b",
-            backgroundColor: "#aaaaaa",
+            backgroundColor: '#aaaaaa',
             borderRadius: 10,
             marginTop: 60,
             marginBottom: 40
           }}
-          textStyle={{ textAlign: "center" }}
+          textStyle={{textAlign: 'center'}}
           onPress={this.handleSettingsPress}
           title={`Zurück zum Eingangsbildschirm`}
         />
@@ -130,18 +145,8 @@ class Feed extends Component {
           title={`Zur HTML Demo`}
         /> */}
       </ScrollView>
-    );
+    )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: "#e9e9ee"
-  }
-});
-
-export default Feed;
+export default Feed

@@ -1,24 +1,21 @@
-import React from "react";
-import { StackNavigator } from "react-navigation";
-import { Icon } from "react-native-elements";
+import {StackNavigator} from 'react-navigation'
 
-import Feed from "../screens/Feed";
-import Home from "../screens/Home";
-// import Settings from "../screens/Settings";
-import ScreenDetail from "../screens/ScreenDetail";
-import HTMLDemo from "../config/HTMLDemo";
+import Feed from '../screens/Feed'
+import Home from '../screens/Home'
+import ScreenDetail from '../screens/ScreenDetail'
+
 // import pdfDemo from "../config/pdfDemo";
 
 export const FeedStack = StackNavigator({
   Feed: {
     screen: Feed,
     navigationOptions: {
-      title: "Apleona HSG Culinaress"
+      title: 'Apleona HSG Culinaress'
     }
   },
   Details: {
     screen: ScreenDetail,
-    navigationOptions: ({ navigation }) => ({
+    navigationOptions: ({navigation}) => ({
       title: navigation.state.params.title.toUpperCase()
     })
   }
@@ -28,7 +25,7 @@ export const FeedStack = StackNavigator({
   //     title: "Monatlicher Restaurant Report"
   //   }
   // }
-});
+})
 
 // export const Tabs = TabNavigator({
 //   Feed: {
@@ -58,13 +55,10 @@ export const Root = StackNavigator(
     },
     Feed: {
       screen: FeedStack
-    },
-    HTMLDemo: {
-      screen: HTMLDemo
     }
   },
   {
-    mode: "modal",
-    headerMode: "none"
+    mode: 'modal',
+    headerMode: 'none'
   }
-);
+)

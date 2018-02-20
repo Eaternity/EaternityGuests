@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import { Root, Tabs } from "./config/router";
-import KeepAwake from "react-native-keep-awake";
+import KeepAwake from 'react-native-keep-awake'
+import React, {Component} from 'react'
+
+import {Root} from './config/router'
 
 class App extends Component {
   render() {
@@ -8,8 +9,8 @@ class App extends Component {
       <Root>
         <KeepAwake />
       </Root>
-    );
+    )
   }
 }
 
-export default App;
+export default App

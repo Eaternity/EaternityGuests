@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { ScrollView, Dimensions, Image, StyleSheet, View } from "react-native";
-import { Tile, List, ListItem } from "react-native-elements";
-import HTML from "react-native-render-html";
+import {ScrollView} from 'react-native'
+import PropTypes from 'prop-types'
+import React, {Component} from 'react'
+import styled from 'styled-components'
 
 // function TileExtra(props) {
 //   if (typeof props.picture.large !== "undefined") {
@@ -19,15 +19,19 @@ import HTML from "react-native-render-html";
 //   );
 // }
 
+const StyledView = styled.View`
+  background-color: #ffffff;
+  padding-bottom: 0;
+  padding-top: 0;
+`
+
 class ScreenDetail extends Component {
+  static propTypes = {
+    navigation: PropTypes.object.isRequired
+  }
+
   render() {
-    const {
-      picture,
-      title,
-      subtitle,
-      htmlContent,
-      content
-    } = this.props.navigation.state.params;
+    const {content: Content} = this.props.navigation.state.params
 
     return (
       <ScrollView>
@@ -37,38 +41,12 @@ class ScreenDetail extends Component {
           title={title.toUpperCase()}
           caption={subtitle}
         /> */}
-        <View
-          style={{
-            backgroundColor: "#ffffff",
-            paddingBottom: 0,
-            paddingTop: 0
-          }}
-        >
-          {content}
-          <HTML
-            html={htmlContent}
-            imagesMaxWidth={Dimensions.get("window").width}
-            tagsStyles={{
-              p: {
-                padding: 30,
-                paddingLeft: 60,
-                paddingRight: 100,
-                fontSize: 20,
-                fontWeight: "300"
-              },
-              h1: {
-                fontSize: 30,
-                fontWeight: "500",
-                paddingLeft: 60,
-                paddingRight: 60,
-                paddingTop: 30
-              }
-            }}
-          />
-        </View>
+        <StyledView>
+          <Content />
+        </StyledView>
       </ScrollView>
-    );
+    )
   }
 }
 
-export default ScreenDetail;
+export default ScreenDetail
