@@ -8,11 +8,6 @@ import {StyledImage} from './Image'
 
 const EssenUndKlimawandelBase = styled.View``
 
-const ProblemCO2 = styled(StyledImage)`
-  width: ${Dimensions.get('window').width - 50}px;
-  height: 400px;
-`
-
 const ProblemShortLabeled = styled(StyledImage)`
   width: ${Dimensions.get('window').width - 150}px;
   height: 200px;

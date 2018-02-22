@@ -1,3 +1,4 @@
+import {Dimensions} from 'react-native'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -7,9 +8,24 @@ import {StyledImage} from './Image'
 
 const KlimafreundlicheMenusBase = styled.View``
 
+const Fallstudie = styled(StyledImage)`
+  height: 500px;
+`
+
+const Recipes = styled(StyledImage)`
+  height: 300px;
+`
+
+const Symbols = styled(StyledImage)`
+  width: ${Dimensions.get('window').width - 150}px;
+  height: 200px;
+`
+
 const KlimafreundlicheMenus = () => (
   <KlimafreundlicheMenusBase>
-    <StyledImage source={require('../config/assets/circle.jpg')} />
+    <StyledImage
+      source={require('../config/assets/klimafreundliche-menus.jpg')}
+    />
 
     <Header>Das Konzept [FoodPRINT]: nachhaltig, gesund und lecker</Header>
     <Paragraph>
@@ -35,6 +51,8 @@ const KlimafreundlicheMenus = () => (
       werden.
     </Paragraph>
 
+    <StyledImage source={require('../config/assets/circle-with-header.png')} />
+
     <Header>DEN CO₂-FUSSABDRUCK VON LEBENSMITTELN MESSEN</Header>
 
     <Paragraph>
@@ -58,7 +76,7 @@ const KlimafreundlicheMenus = () => (
       Fußabdruck jedoch signifikant vergrössern.
     </Paragraph>
 
-    <StyledImage source={require('../config/assets/fallstudie.jpg')} />
+    <Fallstudie source={require('../config/assets/fallstudie.jpg')} />
 
     <Header>AUF ERNÄHRUNGSENTSCHEIDUNGEN KOMMT ES AN</Header>
 
@@ -80,7 +98,7 @@ const KlimafreundlicheMenus = () => (
       erzeugen. Dennoch ist es wichtig, uns bewusst zu sein, dass tierische
       Eiweisse normalerweise mit hohen Umweltkosten verbunden sind, so können
       alle mit einem gesunden Verhältnis zwischen pflanzlichen und tierischen
-      Eiweissen einen Beitrag leisten. Folgende Ernährungsentscheidungen tragen
+      Eiweißen einen Beitrag leisten. Folgende Ernährungsentscheidungen tragen
       signifikant dazu bei, die negative Klimawirkung zu reduzieren:
     </Paragraph>
 
@@ -93,8 +111,6 @@ const KlimafreundlicheMenus = () => (
 
     <StyledImage source={require('../config/assets/ingredients.jpg')} />
 
-    <StyledImage source={require('../config/assets/recipes.jpg')} />
-
     <Paragraph>
       Wir wissen es genau: Eaternity ermittelt für jede Zutat und jedes Menu die
       CO₂-Belastung. Dazu wird tagesaktuell ermittelt, wie viele Emissionen an
@@ -103,7 +119,7 @@ const KlimafreundlicheMenus = () => (
       von CO₂-Belastungen der Nahrungsmittel.
     </Paragraph>
 
-    <StyledImage source={require('../config/assets/symbols.jpg')} />
+    <Recipes source={require('../config/assets/recipes.jpg')} />
 
     <Header>Zutaten eines nachhaltigen Menus:</Header>
     <Paragraph>
@@ -111,6 +127,8 @@ const KlimafreundlicheMenus = () => (
       oder vegan, die Hauptsache ist immer der Geschmack. Und wenn es Fleisch
       gibt, dann ist es verhältnismäßig klimafreundlich.
     </Paragraph>
+
+    <Symbols source={require('../config/assets/symbols.jpg')} />
   </KlimafreundlicheMenusBase>
 )
 
