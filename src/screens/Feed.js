@@ -23,15 +23,12 @@ class Feed extends Component {
 
   onLearnMore = screen => {
     this.props.navigation.navigate('Details', {...screen})
-
-    console.log('there was an interaction')
     this.setState({inactive: false})
   }
 
   componentDidMount() {
     this.setState({inactive: true})
-    var intervalId = setInterval(() => {
-      console.log(this.state.inactive)
+    const intervalId = setInterval(() => {
       if (this.state.inactive) {
         this.props.navigation.goBack(null)
       }
