@@ -9,7 +9,7 @@ export const StyledImage = styled.Image.attrs({
   resizeMode: 'contain'
 })`
   flex: 1;
-  align-self: stretch;
+  align-self: center;
   width: ${imageWidth}px;
   height: ${imageHeight}px;
 `

@@ -8,13 +8,27 @@ import {StyledImage} from './Image'
 
 const EssenUndKlimawandelBase = styled.View``
 
-const ProblemImage = styled(StyledImage)`
-  width: ${Dimensions.get('window').width - 100}px;
+const ProblemCO2 = styled(StyledImage)`
+  width: ${Dimensions.get('window').width - 50}px;
+  height: 400px;
+`
+
+const ProblemShortLabeled = styled(StyledImage)`
+  width: ${Dimensions.get('window').width - 150}px;
+  height: 200px;
 `
 
 const EssenUndKlimawandel = () => (
   <EssenUndKlimawandelBase>
-    <StyledImage source={require('../config/assets/problem-short-CO2.jpg')} />
+    <StyledImage
+      source={require('../config/assets/essen_und_klima_feld.jpg')}
+    />
+
+    <Header>Essen und Klima</Header>
+
+    <ProblemShortLabeled
+      source={require('../config/assets/problem-short-labeled.jpeg')}
+    />
 
     <Paragraph>
       Unsere Nahrungsmittelversorgungskette ist für 1/3 der weltweit
@@ -28,50 +42,20 @@ const EssenUndKlimawandel = () => (
 
     <Paragraph>
       Würden alle Europäer dreimal pro Woche klimafreundlich essen, käme die
-      erzielte Klimawirkung dem Wegfall von 1/6 der Autos in Europa gleich.
-      Momentan verursacht das Essensverhalten pro Person jährlich über drei
-      Tonnen CO₂.
+      erzielte Klimawirkung dem Wegfall von 1/6 aller Autos gleich. Momentan
+      verursacht das Essensverhalten pro Person jährlich über drei Tonnen CO₂.
     </Paragraph>
 
     <Paragraph>
       Mit überlegten, saisonalen und regionalen Lebensmittelentscheidungen
       können wir diese Emissionen um mehr als 50% verringern. Veränderungen im
-      Lebensmittelkonsumverhalten sind der effizienteste Weg,
+      Lebensmittelkonsumverhalten ist der effizienteste Weg,
       Treibhausgasemissionen zu reduzieren und den vom Pariser Klimaabkommen
       festgelegten Grenzwert eines maximalen Temperaturanstieges von 2 Grad
       einzuhalten.
     </Paragraph>
 
-    <ProblemImage source={require('../config/assets/problem-CO2.jpg')} />
-
-    <Paragraph>
-      Die wachsende Weltbevölkerung kombiniert mit der Wohlstandsentwicklung
-      führen zu einer steigenden Lebensmittelnachfrage. Geht es so weiter wie
-      bisher, wird das CO₂-Budget bis 2050 schon mit der Lebensmittelversorgung
-      allein ausgeschöpft. Somit kommt unserem Essen eine Schlüsselrolle beim
-      Erreichen des Klimaziels zu, die globale Temperaturerhöhung unter 2 Grad
-      zu halten.
-    </Paragraph>
-
-    <Paragraph>
-      Die wachsende Weltbevölkerung und der zunehmende Wohlstand bewirken einen
-      Anstieg des mit der Lebensmittelversorgungskette zusammenhängenden
-      Treibhausgasausstoßes. Das steht im Konflikt mit dem weltweiten Ziel, den
-      Temperaturanstieg auf 2 Grad Celsius zu beschränken.
-    </Paragraph>
-
-    <StyledImage source={require('../config/assets/solution-CO2.jpg')} />
-
-    <Paragraph>
-      Um weitere Schäden zu vermeiden, müssen die mit Lebensmitteln in
-      Verbindung stehenden Emissionen um 60% zurückgehen.
-    </Paragraph>
-
-    <Paragraph>
-      Es wird davon ausgegangen, dass der Klimawandel durch ein um wenige Jahre
-      verspätetes Handeln unsererseits zu mehr Zwangsumsiedlungen und Zerstörung
-      führen wird als alle Kriege der Menschheitsgeschichte zusammen.
-    </Paragraph>
+    <StyledImage source={require('../config/assets/problem-co2-labeled.png')} />
 
     <Header>Der Klimawandel</Header>
 
