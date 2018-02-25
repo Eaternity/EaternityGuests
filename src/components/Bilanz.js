@@ -1,18 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Dimensions} from 'react-native'
 
 import {StyledImage} from './Image'
 
-const BilanzBase = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 960px;
+const dimensions = Dimensions.get('window')
+const imageHeight = Math.round(dimensions.width * 1587 / 1123)
+const imageWidth = dimensions.width
+
+const BilanzBase = styled.View``
+
+const AllImage = styled.Image.attrs({
+  resizeMode: 'contain'
+})`
+  width: ${imageWidth}px;
+  height: ${imageHeight}px;
 `
+
 const Bilanz = () => (
   <BilanzBase>
-    <StyledImage source={require('../config/assets/app-download.jpg')} />
+    <AllImage source={require('../config/assets/CUL_App_Plakat_A3_BUMB.jpg')} />
+    {/* <StyledImage source={require('../config/assets/app-download.jpg')} /> */}
     <StyledImage source={require('../config/assets/labeling.jpg')} />
   </BilanzBase>
 )

@@ -1,34 +1,67 @@
-import {Dimensions} from 'react-native'
+import {Dimensions, Image} from 'react-native'
 import React from 'react'
 import styled from 'styled-components'
 
 import {Header} from './Header'
-import {Paragraph} from './Paragraph'
+import {
+  Paragraph,
+  ParagraphHeader,
+  ParagraphColor,
+  ParagraphBold
+} from './Paragraph'
 import {StyledImage} from './Image'
 
 const KlimafreundlicheMenusBase = styled.View``
 
 const Fallstudie = styled(StyledImage)`
-  height: 500px;
+  height: 800px;
 `
 
 const Recipes = styled(StyledImage)`
   height: 300px;
 `
 
-const Symbols = styled(StyledImage)`
-  width: ${Dimensions.get('window').width - 150}px;
-  height: 200px;
+const dimensions = Dimensions.get('window')
+const imageHeight = Math.round(dimensions.width * 9 / 16)
+const imageWidth = dimensions.width
+
+export const StyledImage2 = styled.Image.attrs({
+  resizeMode: 'cover'
+})`
+  flex: 1;
+  align-self: center;
+  width: ${imageWidth}px;
+  height: ${imageHeight}px;
+`
+
+export const StyledImage3 = styled.Image.attrs({
+  resizeMode: 'contain'
+})`
+  flex: 1;
+  align-self: center;
+  width: ${imageWidth}px;
+  height: ${Math.round(dimensions.width * 9 / 20)}px;
 `
 
 const KlimafreundlicheMenus = () => (
   <KlimafreundlicheMenusBase>
-    <StyledImage
+    <StyledImage2
       source={require('../config/assets/klimafreundliche-menus.jpg')}
     />
 
-    <Header>Das Konzept [FoodPRINT]: nachhaltig, gesund und lecker</Header>
-    <Paragraph>
+    <Header>Klimafreundliche Menus</Header>
+    <Image
+      source={require('../config/assets/APLEONA_GruneKuche_Design_EntwurfA_Wortmarke.png')}
+      style={{
+        width: 265,
+        height: 88,
+        marginBottom: 0,
+        marginTop: 0,
+        marginLeft: 60
+      }}
+    />
+    <ParagraphHeader>Nachhaltig, gesund und lecker</ParagraphHeader>
+    <ParagraphBold>
       Ausschlaggebend für die Ökobilanz eines Produktes sind zum einen die
       Bedingungen, unter denen bestimmte Produkte erzeugt werden. Die Produktion
       von Rindfleisch zum Beispiel verursacht eine vergleichsweise starke
@@ -38,9 +71,9 @@ const KlimafreundlicheMenus = () => (
       klimafreundlich ernähren will, sollte eher zu pflanzlichen statt zu
       tierischen Produkten greifen und auf Saisonalität sowie Regionalität
       achten.
-    </Paragraph>
+    </ParagraphBold>
 
-    <Paragraph>
+    <ParagraphColor>
       Um die Klimabilanz zu ermitteln, hat Eaternity einen CO₂-Rechner
       entwickelt, welcher auf der Datenbasis von Studien und fundierten
       Vergleichswerten, kombiniert mit den aktuellen Informationen zu Liefer-
@@ -49,7 +82,7 @@ const KlimafreundlicheMenus = () => (
       Warenwirtschaftssystem, das jedes Betriebsrestaurant von Apleona HSG
       Culinaress nutzt, können so die exakten Werte im Speiseplan angegeben
       werden.
-    </Paragraph>
+    </ParagraphColor>
 
     <StyledImage source={require('../config/assets/circle-with-header.png')} />
 
@@ -80,26 +113,31 @@ const KlimafreundlicheMenus = () => (
 
     <Header>AUF ERNÄHRUNGSENTSCHEIDUNGEN KOMMT ES AN</Header>
 
-    <Paragraph>
+    <ParagraphBold>
       Überlegte Ernährungsentscheidungen haben das Potential, die CO₂-Emissionen
-      unserer Lebensmittelversorgungskette um mindestens 50 % zu reduzieren. Die
-      wachsende Weltbevölkerung kombiniert mit der Wohlstandsentwicklung führt
-      zu einer steigenden Lebensmittelnachfrage. Geht es so weiter wie bisher,
-      wird das CO₂-Budget bis 2050 schon mit der Lebensmittelversorgung allein
-      ausgeschöpft. Somit kommt unserem Essen eine Schlüsselrolle zu beim
+      unserer Lebensmittelversorgungskette um mindestens 50 % zu reduzieren.
+    </ParagraphBold>
+    <Paragraph>
+      Die wachsende Weltbevölkerung kombiniert mit der Wohlstandsentwicklung
+      führt zu einer steigenden Lebensmittelnachfrage. Geht es so weiter wie
+      bisher, wird das CO₂-Budget bis 2050 schon mit der Lebensmittelversorgung
+      allein ausgeschöpft. Somit kommt unserem Essen eine Schlüsselrolle zu beim
       Erreichen des Klimazieles, die globale Temperaturerhöhung unter 2 Grad zu
       halten.
     </Paragraph>
 
-    <Paragraph>
+    <ParagraphColor>
       Es ist uns allen klar, dass die Welt nicht komplett vegetarisch werden
       wird. Es kann sogar Sinn machen, in steilen alpinen Gebieten, welche sich
       nicht für den Gemüse- und Getreideanbau eignen, tierische Proteine zu
       erzeugen. Dennoch ist es wichtig, uns bewusst zu sein, dass tierische
       Eiweisse normalerweise mit hohen Umweltkosten verbunden sind, so können
       alle mit einem gesunden Verhältnis zwischen pflanzlichen und tierischen
-      Eiweißen einen Beitrag leisten. Folgende Ernährungsentscheidungen tragen
-      signifikant dazu bei, die negative Klimawirkung zu reduzieren:
+      Eiweißen einen Beitrag leisten.
+    </ParagraphColor>
+    <Paragraph>
+      Folgende Ernährungsentscheidungen tragen signifikant dazu bei, die
+      negative Klimawirkung zu reduzieren:
     </Paragraph>
 
     <Paragraph>
@@ -109,7 +147,7 @@ const KlimafreundlicheMenus = () => (
       entstehen in der Landwirtschaft – d.h. in der Wahl der Produkte selbst:
     </Paragraph>
 
-    <StyledImage source={require('../config/assets/ingredients.jpg')} />
+    <StyledImage2 source={require('../config/assets/ingredients.jpg')} />
 
     <Paragraph>
       Wir wissen es genau: Eaternity ermittelt für jede Zutat und jedes Menu die
@@ -128,7 +166,7 @@ const KlimafreundlicheMenus = () => (
       gibt, dann ist es verhältnismäßig klimafreundlich.
     </Paragraph>
 
-    <Symbols source={require('../config/assets/symbols.jpg')} />
+    <StyledImage3 source={require('../config/assets/symbols.jpg')} />
   </KlimafreundlicheMenusBase>
 )
 

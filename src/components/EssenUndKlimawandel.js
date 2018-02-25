@@ -4,42 +4,72 @@ import styled from 'styled-components'
 
 import {Header} from './Header'
 import {Paragraph} from './Paragraph'
-import {StyledImage} from './Image'
+import {ParagraphColor} from './Paragraph'
+import {ParagraphBold} from './Paragraph'
+import {ParagraphHeader} from './Paragraph'
+// import {StyledImage} from './Image'
+
+const dimensions = Dimensions.get('window')
+const imageHeight = Math.round(dimensions.width * 4 / 6)
+const imageWidth = dimensions.width
+
+export const StyledImage2 = styled.Image.attrs({
+  resizeMode: 'contain'
+})`
+  flex: 1;
+  align-self: center;
+  width: ${imageWidth}px;
+  height: ${imageHeight}px;
+`
+
+export const StyledImage3 = styled.Image.attrs({
+  resizeMode: 'contain'
+})`
+  flex: 1;
+  align-self: center;
+  width: ${imageWidth}px;
+  height: ${Math.round(dimensions.width * 372 / 1361)}px;
+`
+export const StyledImage4 = styled.Image.attrs({
+  resizeMode: 'contain'
+})`
+  flex: 1;
+  align-self: center;
+  width: ${imageWidth}px;
+  height: ${Math.round(dimensions.width * 1000 / 1450)}px;
+`
 
 const EssenUndKlimawandelBase = styled.View``
 
-const ProblemShortLabeled = styled(StyledImage)`
-  width: ${Dimensions.get('window').width - 150}px;
-  height: 200px;
-`
-
 const EssenUndKlimawandel = () => (
   <EssenUndKlimawandelBase>
-    <StyledImage
+    <StyledImage2
       source={require('../config/assets/essen_und_klima_feld.jpg')}
     />
 
     <Header>Essen und Klima</Header>
 
-    <ProblemShortLabeled
+    <StyledImage3
       source={require('../config/assets/problem-short-labeled.jpeg')}
     />
 
-    <Paragraph>
+    <ParagraphHeader>
       Unsere Nahrungsmittelversorgungskette ist für 1/3 der weltweit
-      verursachten Treibhausgase verantwortlich. Kein Fortschritt im
-      Transportsektor und keine Energierevolution kann den Klimawandel so
-      effizient verlangsamen wie eine intelligente Lebensmittelwahl. Die
-      wirkungsvollsten Antworten auf das Pariser Klimaabkommen verstecken sich
-      in unseren Kühlschränken; sie sind also weder in unseren Garagen noch in
-      unseren Heizungssystemen zu finden!
-    </Paragraph>
+      verursachten Treibhausgase verantwortlich.
+    </ParagraphHeader>
+    <ParagraphBold>
+      Kein Fortschritt im Transportsektor und keine Energierevolution kann den
+      Klimawandel so effizient verlangsamen wie eine intelligente
+      Lebensmittelwahl. Die wirkungsvollsten Antworten auf das Pariser
+      Klimaabkommen verstecken sich in unseren Kühlschränken; sie sind also
+      weder in unseren Garagen noch in unseren Heizungssystemen zu finden!
+    </ParagraphBold>
 
-    <Paragraph>
+    <ParagraphColor>
       Würden alle Europäer dreimal pro Woche klimafreundlich essen, käme die
       erzielte Klimawirkung dem Wegfall von 1/6 aller Autos gleich. Momentan
       verursacht das Essensverhalten pro Person jährlich über drei Tonnen CO₂.
-    </Paragraph>
+    </ParagraphColor>
 
     <Paragraph>
       Mit überlegten, saisonalen und regionalen Lebensmittelentscheidungen
@@ -50,7 +80,9 @@ const EssenUndKlimawandel = () => (
       einzuhalten.
     </Paragraph>
 
-    <StyledImage source={require('../config/assets/problem-co2-labeled.png')} />
+    <StyledImage4
+      source={require('../config/assets/problem-co2-labeled.png')}
+    />
 
     <Header>Der Klimawandel</Header>
 

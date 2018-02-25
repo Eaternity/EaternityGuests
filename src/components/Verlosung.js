@@ -13,9 +13,22 @@ const StyledWebView = styled.WebView`
   height: 600px;
 `
 
+const dimensions = Dimensions.get('window')
+const imageHeight = Math.round(dimensions.width * 9 / 16)
+const imageWidth = dimensions.width
+
+export const StyledImage2 = styled.Image.attrs({
+  resizeMode: 'cover'
+})`
+  flex: 1;
+  align-self: center;
+  width: ${imageWidth}px;
+  height: ${imageHeight}px;
+`
+
 const Verlosung = () => (
   <VerlosungBase>
-    <StyledImage source={require('../config/assets/quiz.jpg')} />
+    <StyledImage2 source={require('../config/assets/quiz.jpg')} />
 
     <Header>An der Verlosung teilnehmen</Header>
 

@@ -7,8 +7,18 @@ import {StyledImage} from './Image'
 
 const AboutApleonaAndEaternityBase = styled.View``
 
+const SmallImage = styled.Image.attrs({
+  resizeMode: 'contain'
+})`
+  flex: 1;
+  align-self: center;
+  width: 400px;
+`
+
 const AboutApleonaAndEaternity = () => (
   <AboutApleonaAndEaternityBase>
+    <SmallImage source={require('../config/assets/APL_HCU_positiv.png')} />
+
     <Header>Über Apleona HSG Culinaress</Header>
 
     <Paragraph>
@@ -30,10 +40,16 @@ const AboutApleonaAndEaternity = () => (
       Schweiz.
     </Paragraph>
 
-    <Paragraph>Weitere Informationen unter: www.ahr.apleona.com</Paragraph>
+    <Paragraph>
+      Weitere Informationen unter www.ahr.apleona.com (Scanne den QR Code):
+    </Paragraph>
     <StyledImage source={require('../config/assets/apleona.jpg')} />
 
     <Header>Über Eaternity</Header>
+
+    <SmallImage
+      source={require('../config/assets/logo-eaternity-huge_04-11-2010.png')}
+    />
 
     <Paragraph>
       Eaternity hat einen ausgeprägten Appetit auf Veränderung. Wir etablieren
@@ -53,7 +69,9 @@ const AboutApleonaAndEaternity = () => (
       Umweltinformationen zur Verfügung zu stellen.
     </Paragraph>
 
-    <Paragraph>Weitere Informationen unter: www.eaternity.org</Paragraph>
+    <Paragraph>
+      Weitere Informationen unter www.eaternity.org (Scanne den QR Code):
+    </Paragraph>
     <StyledImage source={require('../config/assets/eaternity.jpg')} />
   </AboutApleonaAndEaternityBase>
 )
