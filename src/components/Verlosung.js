@@ -38,7 +38,7 @@ const Verlosung = () => (
 
     <StyledWebView
       source={{
-        uri: 'https://manuelklarmann.typeform.com/to/QBMh5I'
+        uri: 'https://apleona.typeform.com/to/KWVslS'
       }}
     />
 

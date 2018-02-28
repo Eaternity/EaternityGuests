@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ReportsBase = styled.View`
-  padding: 0 20px;
+  padding: 0px;
 `
 
 const StyledWebView = styled.WebView`
