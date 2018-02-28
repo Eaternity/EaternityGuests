@@ -43,9 +43,12 @@ const Verlosung = () => (
     />
 
     <Paragraph>
-      Die Verlosung findet Mitte November statt. GewinnerInnen werden per Email
-      benachrichtigt. Mitarbeitende der beteiligten Personalrestaurants sind von
-      der Teilnahme am Menu-Quiz ausgeschlossen.
+      Wir verlosen 10 Gutscheine für ein klimafreundliches Gericht im Park
+      Casino für jeweils eine Person. Bitte beantworten Sie dazu einfach kurz
+      vier Fragen. Die Verlosung findet am 23. März 2018 statt.Die eingegebenen
+      Daten werden ausschließlich zur Gewinnermittlung und Benachrichtigung der
+      Gewinner verwendet. Mitarbeiter von Apleona sind von der Teilnahme an der
+      Verlosung ausgeschlossen.
     </Paragraph>
   </VerlosungBase>
 )
