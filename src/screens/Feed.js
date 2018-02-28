@@ -24,6 +24,9 @@ class Feed extends Component {
   onLearnMore = screen => {
     this.props.navigation.navigate('Details', {...screen})
     this.setState({inactive: false})
+    const interval = setTimeout(() => {
+      this.setState({inactive: true})
+    }, 60000)
   }
 
   componentDidMount() {
