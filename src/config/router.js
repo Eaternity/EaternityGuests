@@ -1,21 +1,21 @@
-import {StackNavigator} from 'react-navigation'
+import { createStackNavigator } from "react-navigation";
 
-import Feed from '../screens/Feed'
-import Home from '../screens/Home'
-import ScreenDetail from '../screens/ScreenDetail'
+import Feed from "../screens/Feed";
+import Home from "../screens/Home";
+import ScreenDetail from "../screens/ScreenDetail";
 
 // import pdfDemo from "../config/pdfDemo";
 
-export const FeedStack = StackNavigator({
+export const FeedStack = createStackNavigator({
   Feed: {
     screen: Feed,
     navigationOptions: {
-      title: 'Apleona HSG Culinaress'
+      title: "Apleona HSG Culinaress"
     }
   },
   Details: {
     screen: ScreenDetail,
-    navigationOptions: ({navigation}) => ({
+    navigationOptions: ({ navigation }) => ({
       title: navigation.state.params.title.toUpperCase()
     })
   }
@@ -25,7 +25,7 @@ export const FeedStack = StackNavigator({
   //     title: "Monatlicher Restaurant Report"
   //   }
   // }
-})
+});
 
 // export const Tabs = TabNavigator({
 //   Feed: {
@@ -48,7 +48,7 @@ export const FeedStack = StackNavigator({
 //   }
 // });
 
-export const Root = StackNavigator(
+export const Root = createStackNavigator(
   {
     Home: {
       screen: Home
@@ -58,7 +58,7 @@ export const Root = StackNavigator(
     }
   },
   {
-    mode: 'modal',
-    headerMode: 'none'
+    mode: "modal",
+    headerMode: "none"
   }
-)
+);

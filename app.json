@@ -1,15 +1,24 @@
 {
-  "name": "EaternityGuests",
-  "displayName": "EaternityGuests",
   "expo": {
-    "sdkVersion": "23.0.0",
-    "name": "Eaternity Guests",
+    "name": "EaternityGuests",
+    "description": "This project is really great.",
     "slug": "EaternityGuests",
     "privacy": "unlisted",
-    "icon": "./src/config/assets/Icon@2x.png",
-    "version": "0.0.4",
+    "sdkVersion": "30.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "bundleIdentifier": "com.eaternity.eaternityguests",
       "supportsTablet": true
     }
   }
